@@ -351,7 +351,6 @@ uint32_t CacheL1::process_event(uint64_t curr_time)
         case et_m_to_m:
           num_coherency_access++;
           if (set_iter == NULL || set_iter->second != cs_modified)
-          //if (set_iter == tags[set].end() || set_iter->second != cs_modified)
           {
             if (sent_to_l2 == true) break;
             sent_to_l2 = true;
